@@ -28,6 +28,7 @@ Paragraph default: 1.6
  #6f6f6f light
 
  #fae5d3
+ #eb984e
  - Shades: #cf711f
  - Accents: 
  - Greys: 
@@ -35,6 +36,7 @@ Paragraph default: 1.6
  #333
 
  --- 05 SHADOWS
+0 2.4rem 4.8rem rgba(0,0,0,0.1);
 
  --- 06 BORDER-RADIUS
 
@@ -77,6 +79,11 @@ body {
     display: grid;
     column-gap: 6.4rem;
     row-gap: 9.6rem;
+    margin-bottom: 9.6rem;
+}
+
+.grid:not(:last-child) {
+    margin-bottom: 9.6rem;
 }
 
 .grid--2-cols {
@@ -89,6 +96,10 @@ body {
 
 .grid--4-cols {
     grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .grid--center-v {
@@ -138,6 +149,7 @@ body {
 
 }
 
+.btn,
 .btn:link, 
 .btn:visited {
     display: inline-block;
@@ -147,6 +159,10 @@ body {
     padding: 1.6rem 3.2rem;
     border-radius: 9px;
     transition: all 0.3s;
+
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
 }
 
 .btn--full:link,
@@ -177,6 +193,18 @@ body {
     width: 100%;
 }
 
+.btn--form {
+    background-color: #45260a;
+    color: #fdf2e9;
+    align-self: end;
+    padding: 1.2rem;
+}
+
+.btn--form:hover {
+    background-color: #fdf2e9;
+    color: #555;
+}
+
 .link:link,
 .link:visited {
     display: inline-block;
@@ -200,11 +228,13 @@ body {
     margin-bottom: 4.8rem !important;
 }
 
+.margin-bottom-lala {
+    margin-bottom: 1.6rem !important;
+}
+
 .center-text {
     text-align: center;
 }
-
-
 
 strong {
     font-weight: 500;
